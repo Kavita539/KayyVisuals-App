@@ -1,0 +1,26 @@
+/* footer */
+.footer {
+    background-color: var(--secondary-color);
+    padding: var(--xl-space);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline-styled-list li {
+    border: none;
+    background-color: var(--secondary-color);
+}
+
+.footer-list {
+    column-gap: 2rem;
+    color: var(--doc-section-color);
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+}
+
+.footer-links {
+    text-decoration: none;
+    color: var(--black);
+}

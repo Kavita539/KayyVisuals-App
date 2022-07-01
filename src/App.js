@@ -1,7 +1,16 @@
+import {
+    Base
+} from "./components";
+import {
+    NavigationRoutes
+} from "./routes/NavigationRoutes";
 
-
-function App() {
- 
+const App = () => {
+    return ( 
+        <Base >
+         <NavigationRoutes />
+        </Base>
+    );
 }
 
-export default App;
+export { App };

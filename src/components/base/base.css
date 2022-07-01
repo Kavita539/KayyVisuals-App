@@ -1,0 +1,25 @@
+.children-container {
+    grid-area: children-container;
+    min-height: calc(100vh - 200px);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 18.75rem 1fr;
+    column-gap: var(--md-space);
+    grid-template-areas:
+        "nav nav"
+        "sidebar children-container"
+        "footer footer";
+}
+
+@media only screen and (max-width: 1200px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "nav"
+            "children-container"
+            "footer";
+
+    }
+}

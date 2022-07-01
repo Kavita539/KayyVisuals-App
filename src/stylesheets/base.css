@@ -1,0 +1,15 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+}
+
+:root {
+    --sm-space: 0.5rem;
+    --md-space: 1rem;
+    --lg-space: 1.5rem;
+    --xl-space: 2rem;
+    --xxl-space: 2.5rem;
+    --xxxl-space: 3rem;
+    
+    --sideBar-shadow: rgb(0 0 0 / 24%) 0px 4px 9px;
+}
