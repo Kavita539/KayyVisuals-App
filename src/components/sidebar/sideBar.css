@@ -1,0 +1,36 @@
+@import url(../../stylesheets/base.css);
+.sidebar-list {
+    grid-area: sidebar;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sm-space);
+    padding: var(--md-space) 0;
+    margin: 0;
+    text-align: center;
+    background-color: transparent;
+    align-items: center;
+}
+
+.sidebar-list .grid-30-70 {
+    text-decoration: none;
+    color: var(--text-color);
+    align-items: center;
+    padding: var(--md-space) 0;
+    cursor: pointer;
+    display: flex;
+    gap: var(--sm-space);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .sidebar-list {
+        position: fixed;
+        left: -100rem;
+    }
+}

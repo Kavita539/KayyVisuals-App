@@ -1,0 +1,91 @@
+.navbar {
+    padding: 1rem;
+    height: 4.5rem;
+}
+
+.burger-menu-button {
+    display: none;
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    border: none;
+    width: 2rem;
+    background-color: var(--bg-color);
+}
+
+/* nav-logo */
+.nav-logo-title{
+    font-size: 1.5rem;
+}
+
+.custom-color{
+    color: var(--nav-logo-custom-color);
+}
+
+.nav-logo-tagline {
+    display: block;
+}
+
+/* search-bar */
+.nav-search-bar {
+    width: 30rem;
+    display: flex;
+    flex-shrink: 50%;
+    align-items: center;
+    position: relative;
+}
+
+.nav-search-bar button {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--black);
+}
+
+.search-btn {
+    min-width: 10px;
+}
+
+.right-navbar .navlist-link-item {
+    display: block;
+}
+
+.link-btn {
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* media-queries */
+@media only screen and (max-width: 1024px) {
+    .burger-menu-button {
+        display: block;
+    }
+
+    .nav-logo-title {
+        padding-top: 10px;
+        font-size: 2rem;
+    }
+
+    .nav-logo-tagline {
+        display: none;
+    }
+
+    .nav-search-bar {
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .right-navbar .navlist-link-item {
+        display: none;
+    }
+
+}
