@@ -13,6 +13,13 @@
         "footer footer";
 }
 
+.main-container-secondary {
+    grid-template-areas:
+        "nav nav"
+        "children-container children-container"
+        "footer footer";
+}
+
 @media only screen and (max-width: 1200px) {
     .main-container {
         grid-template-columns: 1fr;
