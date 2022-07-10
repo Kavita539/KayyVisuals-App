@@ -11,29 +11,25 @@ import {
 } from "../../utils";
 import "./videoCard.css";
 
-const VideoCard = ({
-        video
-    }) => {
-        
-        const {
-            _id,
-            title,
-            creator,
-            creatorImg,
-        } = video;
+const VideoCard = ({ video }) => {
+  const {
+      _id,
+      title,
+      creator,
+      creatorImg
+  } = video;
+  const getVideoTitleTrimmedToEightyChar = title => {
+      if (title.length < 80) {
+          return title;
+      }
+      return title.substr(0, 78) + "..";
+  };
 
-const getVideoTitleTrimmedToEightyChar = title => {
-     if (title?.length < 80) {
-        return title;
-    }
-        return title.substr(0, 78) + "..";
-};
-const [showThreeDotMenu, setShowThreeDotMenu] = useState(false);
+  const [showThreeDotMenu, setShowThreeDotMenu] = useState(false);
 
-return (
+  return (
     <div className="video-card">
         <Link to={`/explore/${_id}`} className="video-card-image-container">
-
         <img className="responsive-img" src={thumbnailLink(_id)} alt={title} />
         </Link>
 
@@ -47,7 +43,7 @@ return (
                 <span className="description-heading text-semibold">
                     {getVideoTitleTrimmedToEightyChar(title)}
                 </span>
-                <span className="text-xs text-semibold">{creator}</span>
+                <span className="text-xs text-semibold text-gray">{creator}</span>
                 </Link>
             </div>
 
@@ -76,8 +72,7 @@ return (
             </div>
         </div>
     </div>
-);
-
+  );
 };
 
 export {

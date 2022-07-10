@@ -1,4 +1,4 @@
-.form-container .form-grp .input-grp {
+.form-div .form-grp .input-grp {
     position: relative;
     margin: var(--sm-space) 0;
 }
@@ -11,8 +11,9 @@
 .password-toggle-button.btn {
     box-shadow: none;
     position: absolute;
-    bottom: 1px;
-    right: 0;
+    bottom: -5px;
+    right: -2rem;
+    border: none;
 }
 
 .options {

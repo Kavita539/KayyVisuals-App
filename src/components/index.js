@@ -30,3 +30,7 @@ export {
     PasswordInput
 }
 from "./input/PasswordInput";
+export {
+    Loader
+}
+from "./loader/Loader";
