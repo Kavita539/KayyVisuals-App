@@ -2,7 +2,7 @@ import { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { authReducer } from "../reducers";
 import { getLoginService, getSignupService } from "../services";
-import { authActions } from "../reducers/actionTypes";
+import { authActions } from "../actionTypes";
 
 const { INITIALIZE, LOGIN_USER, LOGOUT_USER, SET_ERROR } = authActions;
 
@@ -78,7 +78,7 @@ const AuthProvider = ({ children }) => {
     navigate("/");
     localStorage.removeItem("jwt");
   };
-  
+
   return (
     <authContext.Provider value={{ authState, authDispatch, login, signup, logout }}>
       {children}
