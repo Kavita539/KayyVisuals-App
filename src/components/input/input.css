@@ -1,0 +1,22 @@
+.form-div .form-grp .input-grp {
+    position: relative;
+    margin: var(--sm-space) 0;
+}
+
+.txt-message {
+    position: absolute;
+    right: 0;
+}
+
+.password-toggle-button.btn {
+    box-shadow: none;
+    position: absolute;
+    bottom: -5px;
+    right: -2rem;
+    border: none;
+}
+
+.options {
+    position: relative;
+    margin: var(--xl-space) 0 var(--sm-space);
+}

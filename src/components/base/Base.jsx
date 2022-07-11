@@ -6,20 +6,27 @@ import {
 } from "../navbar/Navbar";
 import {
     SideBar
-} from "../sidebar/SideBar";
+}
+from "../sidebar/SideBar";
+import {
+    useLocation
+} from "react-router-dom";
 import "./base.css";
 
 const Base = ({
         children
     }) => {
+        const { pathname } = useLocation();
+        const sidebarRestrictedRoutes = ["/signin", "/signup"];
         return (
     <>
-      <Navbar />
-      <div className="main-container">
-        <SideBar />
-        <div className="children-container">{children}</div>
-      </div>
-      <Footer />
+        <Navbar />
+        <div className={ sidebarRestrictedRoutes.includes(pathname) ? "main-container-secondary" : "main-container" }>
+            {sidebarRestrictedRoutes.includes(pathname) ? null :
+            <SideBar />}
+            <div className="children-container">{children}</div>
+        </div>
+        <Footer />
     </>
    );
 };

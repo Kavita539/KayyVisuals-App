@@ -22,3 +22,15 @@ export {
     PlaylistCard
 }
 from "./playlistCard/PlaylistCard";
+export {
+    Input
+}
+from "./input/Input";
+export {
+    PasswordInput
+}
+from "./input/PasswordInput";
+export {
+    Loader
+}
+from "./loader/Loader";

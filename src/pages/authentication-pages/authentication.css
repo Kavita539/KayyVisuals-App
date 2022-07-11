@@ -1,0 +1,44 @@
+.authentication-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--xl-space);
+    margin: var(--lg-space);
+}
+
+.form-div {
+    background-color: var(--light-secondary-color);
+    padding: var(--xl-space);
+    border-radius: 4.8px;
+    width: 25rem;
+    box-shadow: var(--card-shadow);
+}
+
+.form-grp {
+    position: relative;
+}
+
+/* agreement optipon div styling */
+.agreement-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* btn styling */
+.authentication-btn-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block-btn {
+    border-radius: 4px;
+}
+
+.submit-btn {
+    padding: 10px;
+    margin-top: var(--sm-space);
+}

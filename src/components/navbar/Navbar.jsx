@@ -27,11 +27,14 @@ const Navbar = () => {
                     <Link to="/explore" className="navlist-link-item"> <button className="btn link-btn">Explore</button>
                     </Link>
                 </li>
+                <li>
+                    <Link to="/signin" className="anchor-tag-badge-container"> <i className="fas fa-user "></i> <span className="text-xs">Login</span></Link>
+                </li>
             </ul>
         </nav>
     );
 };
 
 export {
-    Navbar
+    Navbar 
 };

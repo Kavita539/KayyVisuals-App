@@ -4,6 +4,7 @@ body {
 }
 
 :root {
+    --xs-space: 0.2rem;
     --sm-space: 0.5rem;
     --md-space: 1rem;
     --lg-space: 1.5rem;

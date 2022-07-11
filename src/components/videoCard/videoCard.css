@@ -30,6 +30,8 @@
 }
 
 .text-description {
+    text-decoration: none;
+    color: var(--black);
     display: flex;
     flex-direction: column;
 }
