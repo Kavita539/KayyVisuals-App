@@ -5,4 +5,4 @@ from "../reducers/videosReducer";
 export {
     authReducer
 }
-from "../reducers/authReducers";
+from "./authReducer";
