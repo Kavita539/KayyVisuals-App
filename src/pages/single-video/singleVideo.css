@@ -4,6 +4,12 @@
     padding: var(--md-space);
 }
 
+.grid-70-30 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: var(--md-space);
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -85,14 +91,27 @@
 .video-cta-buttons:hover {
     opacity: 1;
 }
- 
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1000px){
+.grid-70-30 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
+
 @media only screen and (max-width: 990px) {
     .notes-section {
       height: 100%;
       overflow: hidden;
     }
-  }
-  @media only screen and (max-width: 500px) {
+}
+
+@media only screen and (max-width: 500px) {
     .video-container {
       padding: 0;
     }
