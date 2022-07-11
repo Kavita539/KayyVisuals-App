@@ -18,3 +18,7 @@ export {
     SingleVideo
 }
 from "./single-video/SingleVideo";
+export {
+    LikedVideos
+}
+from "./liked-videos/LikedVideos";

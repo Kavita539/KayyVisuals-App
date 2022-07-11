@@ -34,3 +34,7 @@ export {
     Loader
 }
 from "./loader/Loader";
+export {
+    OverlayContainer
+} 
+from "./overlay-container/OverlayContainer";
