@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Explore, Playlist, Signin, Signup, SingleVideo } from "../pages";
+import { Explore, Playlist, Signin, Signup, SingleVideo, LikedVideos } from "../pages";
 import { PrivateRoutes } from "./PrivateRoutes";
 import Mockman from "mockman-js";
 
