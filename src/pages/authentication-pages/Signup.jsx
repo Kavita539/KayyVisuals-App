@@ -1,6 +1,7 @@
 import { Input, PasswordInput } from "../../components";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context";
+import { useState, useEffect } from "react";
 import "./authentication.css";
 
 const Signup = () => {
