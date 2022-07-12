@@ -2,6 +2,7 @@ import { Input, PasswordInput, Loader, OverlayContainer } from "../../components
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context";
 import { useState, useEffect } from "react";
+import { validFormChecker } from "../../utils";
 import "./authentication.css";
 
 const Signup = () => {
