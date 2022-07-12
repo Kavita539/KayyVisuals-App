@@ -20,6 +20,10 @@
     min-height: calc(100vh - 200px);
     width: 100%;
     gap: var(--md-space);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 430px) {

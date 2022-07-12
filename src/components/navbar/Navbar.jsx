@@ -36,7 +36,7 @@ const Navbar = () => {
                 </li>
                 {token ? (
                     <li>
-                        <button className="btn outline-btn" onClick={() => logout()}>
+                        <button className="btn outline-btn logout-btn" onClick={() => logout()}>
                             <i className="fas fa-sign-out"></i>
                         </button>
                     </li>

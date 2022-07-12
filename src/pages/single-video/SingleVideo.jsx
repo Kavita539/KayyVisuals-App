@@ -39,7 +39,7 @@ return (
             <h3>{video?.title}</h3>
 
             <div className="video-cta">
-                <button className="video-cta-buttons" oonClick={()=>
+                <button className="video-cta-buttons" onClick={()=>
                     token ? (isLiked ? removeFromLike(videoId) : addToLike(video)) : navigate("/signin")
                     }
                     >
