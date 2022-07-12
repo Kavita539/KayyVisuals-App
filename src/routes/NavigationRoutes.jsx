@@ -2,8 +2,13 @@ import { Routes, Route } from "react-router-dom";
 import { Explore, Playlist, Signin, Signup, SingleVideo, LikedVideos } from "../pages";
 import { PrivateRoutes } from "./PrivateRoutes";
 import Mockman from "mockman-js";
+import { useAuth } from "../context";
 
 const NavigationRoutes = () => {
+  const {
+    authState: { token },
+  } = useAuth();
+  
   return (
     <Routes>
       <Route path="/explore" element={<Explore />} />
