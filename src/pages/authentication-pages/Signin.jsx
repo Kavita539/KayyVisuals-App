@@ -93,8 +93,13 @@ const Signin = () => {
                         </div>
 
                         <div className="authentication-btn-cta">
-                            <button className="btn btn-primary block-btn submit-btn">Login</button>
+                            <button className="btn btn-primary block-btn submit-btn" onClick={e => formSubmitHandler(e)}>Login</button>
                         </div>
+
+                        <div className="authentication-btn-cta">
+          <button className="btn outline-btn-primary block-btn submit-btn" onClick={e=> loginWithGuest(e)}>Login with Test
+            Credentials</button>
+        </div>
 
                         <div className="redirect-link text-center">
                             <button className="btn link-btn"><Link to="/signup">Create new
