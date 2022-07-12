@@ -43,7 +43,7 @@ return (
                     token ? (isLiked ? removeFromLike(videoId) : addToLike(video)) : navigate("/signin")
                     }
                     >
-                    <i className={`fas fa-thumbs-up ${isLiked ? "text-primary-color" : "" }`}></i>
+                    <i className={`fas fa-thumbs-up ${isLiked ? "primary-color" : "" }`}></i>
                 </button>
 
                 <button className="video-cta-buttons">

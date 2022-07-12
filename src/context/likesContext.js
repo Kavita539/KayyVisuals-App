@@ -9,7 +9,7 @@ import {
 } from "../reducers";
 import {
     getLikesServices,
-    removeFromLikesService,
+    removeFromLikesServices,
     addToLikesServices
 } from "../services";
 import {
@@ -56,7 +56,7 @@ const LikesProvider = ({
                         type: INITIALIZE
                     });
 
-                    const res = await getLikesService(token);
+                    const res = await getLikesServices(token);
 
                     if (res.status === 200) {
                         likesDispatch({
@@ -84,7 +84,7 @@ const LikesProvider = ({
                     type: INITIALIZE
                 });
 
-                const res = await addToLikesService(video, token);
+                const res = await addToLikesServices(video, token);
 
                 if (res.status === 201) {
                     likesDispatch({
@@ -114,7 +114,7 @@ const LikesProvider = ({
                     type: INITIALIZE
                 });
 
-                const res = await removeLikesService(id, token);
+                const res = await removeFromLikesServices(id, token);
 
                 if (res.status === 200) {
                     likesDispatch({
