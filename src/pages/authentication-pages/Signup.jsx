@@ -31,11 +31,11 @@ setFormErrors(() => validFormChecker(userInput));
 const formSubmitHandler = e => {
 e.preventDefault();
 
-const { name, lastName, email, password } = userInput;
+const { name: firstName, lastName, email, password } = userInput;
 
 setSubmitted(true);
 if (!(Object.values(formErrors).length > 0)) {
-signup({ name, lastName, email, password });
+signup({ firstName, lastName, email, password });
 setFormErrors({});
 }
 };

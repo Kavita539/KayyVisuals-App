@@ -11,6 +11,9 @@ from "../sidebar/SideBar";
 import {
     useLocation
 } from "react-router-dom";
+import { 
+    Toaster 
+} from "react-hot-toast";
 import "./base.css";
 
 const Base = ({
@@ -20,6 +23,7 @@ const Base = ({
         const sidebarRestrictedRoutes = ["/signin", "/signup"];
         return (
     <>
+        <Toaster />
         <Navbar />
         <div className={ sidebarRestrictedRoutes.includes(pathname) ? "main-container-secondary" : "main-container" }>
             {sidebarRestrictedRoutes.includes(pathname) ? null :

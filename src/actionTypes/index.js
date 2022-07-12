@@ -6,3 +6,7 @@ export {
     authActions
 }
 from "./authActions";
+export {
+    likesActions
+}
+from "./likesActions";

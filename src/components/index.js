@@ -38,3 +38,7 @@ export {
     OverlayContainer
 } 
 from "./overlay-container/OverlayContainer";
+export {
+    StackedVideoItem
+} 
+from "./stacked-video/StackedvideoItem";

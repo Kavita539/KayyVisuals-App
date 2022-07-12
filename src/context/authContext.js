@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { authReducer } from "../reducers";
 import { getLoginService, getSignupService } from "../services";
 import { authActions } from "../actionTypes";
+import toast from "react-hot-toast";
 
 const { INITIALIZE, LOGIN_USER, LOGOUT_USER, SET_ERROR } = authActions;
 
@@ -28,7 +29,6 @@ const AuthProvider = ({ children }) => {
       authDispatch({ type: INITIALIZE });
 
       const res = await getLoginService(userInput);
-      console.log(res);
       if (res.status === 200) {
         const {
           foundUser: { firstName },
@@ -41,6 +41,8 @@ const AuthProvider = ({ children }) => {
           type: LOGIN_USER,
           payload: { userName: firstName, token: encodedToken },
         });
+        
+        toast.success(`Hi!, ${firstName}`, { icon: "👋" });
 
         navigate(from, { replace: true });
       }
@@ -56,8 +58,10 @@ const AuthProvider = ({ children }) => {
       const res = await getSignupService(userInput);
 
       if (res.status === 201) {
-        const { firstName } = res.data.createdUser;
-        const { encodedToken } = res.data;
+        const {
+          createdUser: { firstName },
+          encodedToken,
+        } = res.data;
 
         localStorage.setItem("jwt", JSON.stringify({ userName: firstName, token: encodedToken }));
 
@@ -65,6 +69,8 @@ const AuthProvider = ({ children }) => {
           type: LOGIN_USER,
           payload: { userName: firstName, token: encodedToken },
         });
+
+        toast.success(`Hi!, ${firstName}`, { icon: "👋" });
 
         navigate("/");
       }

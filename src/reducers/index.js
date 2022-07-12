@@ -6,3 +6,7 @@ export {
     authReducer
 }
 from "./authReducer";
+export {
+    likesReducer
+}
+from "./likesReducer";
