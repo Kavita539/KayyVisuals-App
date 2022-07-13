@@ -11,7 +11,7 @@
     height: 30px;
     border-radius: 0;
     padding: 2px;
-    color: var(--background-color);
+    color: var(--bg-color);
     background-color: transparent;
 }
 
@@ -52,7 +52,7 @@
 
 .three-don-menu-button {
     border: none;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     cursor: pointer;
     padding: 0;
     position: relative;
@@ -64,7 +64,7 @@
     top: 0px;
     right: 8px;
     padding-inline-start: 0;
-    background-color: var(--background-color);
+    background-color: var(--bg-color);
     box-shadow: var(--card-hover-shadow);
     padding: var(--sm-space);
     width: 12rem;

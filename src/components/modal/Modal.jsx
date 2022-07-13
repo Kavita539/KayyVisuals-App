@@ -16,9 +16,9 @@ const [isCreating, setIsCreating] = useState(false);
 const [playlistName, setPlaylistName] = useState("");
 
 return (
-<div className={`modal-background ${showModal ? "flex-total-center" : "" }`} onClick={e=> {
+<div className={`modal-bg-container ${showModal ? "flex-total-center" : "" }`} onClick={e=> {
     setShowModal(
-    !(e.target.classList.contains("modal-background") || e.target.classList.contains("fas"))
+    !(e.target.classList.contains("modal-bg-container") || e.target.classList.contains("fas"))
     );
     }}
     >
