@@ -1,14 +1,32 @@
 import { Routes, Route } from "react-router-dom";
-import { Explore, Playlist, Signin, Signup, SingleVideo } from "../pages";
+import { Explore, Playlist, Signin, Signup, SingleVideo, LikedVideos } from "../pages";
+import { PrivateRoutes } from "./PrivateRoutes";
+import Mockman from "mockman-js";
+import { useAuth } from "../context";
 
 const NavigationRoutes = () => {
+  const {
+    authState: { token },
+  } = useAuth();
+  
   return (
     <Routes>
       <Route path="/explore" element={<Explore />} />
       <Route path="/playlist" element={<Playlist />} />
       <Route path="/explore/:videoId" element={<SingleVideo />} />
-      <Route path="/signin" element={<Signin />} />
-      <Route path="/signup" element={<Signup />} />
+      <Route path="/liked" element={<PrivateRoutes element={LikedVideos} />} />
+      {!token ? (
+        <>
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+        </>
+      ) : (
+        <>
+          <Route path="/signin" element={<Navigate replace to="/" />} />
+          <Route path="/signup" element={<Navigate replace to="/" />} />
+        </>
+      )}
+      <Route path="/mockman" element={<Mockman />} />
     </Routes>
   );
 };
