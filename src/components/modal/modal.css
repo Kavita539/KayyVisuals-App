@@ -8,6 +8,10 @@
     justify-content: center;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
 .list-overflow {
     padding: 0 var(--md-space);
 }

@@ -6,7 +6,7 @@ import "./modal.css";
 
 const Modal = ({ showModal, setShowModal, video }) => {
 const {
-playlistState: { playlists, loading, error },
+playlistState: { playlists, loading },
 createPlaylist,
 removeFromPlaylist,
 addVideoToPlaylist,
@@ -64,7 +64,7 @@ return (
                 setPlaylistName(e.target.value)}
                 />
             </div>
-            <button className="btn btn-primary" onClick={e=> {
+            <button className="btn primary-btn" onClick={e=> {
                 e.preventDefault();
                 if (playlistName.trim().length) {
                 createPlaylist(playlistName, video);
@@ -79,7 +79,7 @@ return (
         </form>
         ) : (
         <div className="dialog-cta">
-            <button className="btn btn-outline block-btn confirmation-dialog-box-close-btn" onClick={()=>
+            <button className="btn outline-btn block-btn confirmation-dialog-box-close-btn" onClick={()=>
                 setIsCreating(true)}
                 >
                 Create new playlist
