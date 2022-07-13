@@ -11,6 +11,7 @@ thumbnailLink
 } from "../../utils";
 import { Modal } from "../modal/Modal";
 import { useAuth } from "../../context";
+import toast from "react-hot-toast";
 import "./videoCard.css";
 
 const VideoCard = ({ video }) => {
