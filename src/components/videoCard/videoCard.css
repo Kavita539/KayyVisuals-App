@@ -70,9 +70,10 @@
     width: 12rem;
 }
 
-.video-card-option-list-sibling {
-    position: absolute;
-    background-color: red;
+.grid-30-70 {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: var(--md-space);
 }
 
 .video-card-option-list .grid-30-70:hover {
@@ -84,4 +85,11 @@
     gap: 0;
     align-items: center;
     margin: var(--sm-space) 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .video-card-option-list .grid-30-70 {
+        grid-template-columns: 30% 70%;
+    }
+
 }
