@@ -9,12 +9,7 @@ const [showOptions, setShowOptions] = useState(false);
 const { _id, title, videos } = playlist;
 
 const { deletePlaylist } = usePlaylist();
-if (token) {
-setShowModal(true);
-} else {
-toast.error("Please login continue");
-navigate("/signin");
-}
+
 return (
 <div className="playlist-card">
   <Link to={`/playlist/${playlist._id}`} className="playlist-card-img-container">

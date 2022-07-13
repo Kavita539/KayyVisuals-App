@@ -97,12 +97,10 @@ const PlaylistProvider = ({
                     });
                     toast.success("Video added to playlist");
                 }
-            } catch (err) {
-                playlistDispatch({
-                    type: SET_ERROR,
-                    payload: err.response.data.errors[0]
-                });
-                toast.error(err.response.data.errors[0]);
+            } catch (err) {playlistDispatch({
+                type: SET_ERROR,
+                payload: err.response.data.errors[0] });
+            toast.error(err.response.data.errors[0]);
             }
         }
     };
