@@ -22,7 +22,7 @@ return (
     );
     }}
     >
-    <div className="dialog-box">
+    <div className="dialog-modal-box">
         <div className="dialog-header">
             <h3>Save to</h3>
         </div>
@@ -31,7 +31,7 @@ return (
         </button>
 
         {playlists.length ? (
-        <ul className="dialog-list list-overflow no-style-list">
+        <ul className="dialog-list list-overflow">
             {loading ? (
             <Loader />
             ) : (
@@ -64,7 +64,7 @@ return (
                 setPlaylistName(e.target.value)}
                 />
             </div>
-            <button className="btn primary-btn" onClick={e=> {
+            <button className="btn btn-primary" onClick={e=> {
                 e.preventDefault();
                 if (playlistName.trim().length) {
                 createPlaylist(playlistName, video);
