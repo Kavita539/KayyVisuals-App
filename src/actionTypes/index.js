@@ -10,3 +10,7 @@ export {
     likesActions
 }
 from "./likesActions";
+export {
+    playlistActions
+}
+from "./playlistActions";

@@ -15,6 +15,7 @@ import "../single-playlist/singlePlaylist.css";
 const LikedVideos = () => {
     const {
       likesState: { likedList },
+      removeFromLike,
     } = useLikes();
   
     return likedList.length ? (
@@ -34,7 +35,7 @@ const LikedVideos = () => {
         </section>
         <section className="playlist-video-items flex-column">
           {likedList.map(video => (
-            <StackedVideoItem key={video._id} video={video} />
+            <StackedVideoItem key={video._id} video={video} removeFunction={removeFromLike} />
           ))}
         </section>
       </main>
