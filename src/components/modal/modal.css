@@ -1,3 +1,14 @@
+.modal-background {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    inset: 0 0 0 0;
+    overflow: auto;
+    background-color: var(--card-overlay-color);
+    justify-content: center;
+    align-items: center;
+}
+
 .flex-total-center {
     display: flex;
     align-items: center;
@@ -8,7 +19,7 @@
     flex-direction: column;
 }
 
-/* .modal-action-btn {
+.modal-action-btn {
     background-color: transparent;
     border: none;
     position: absolute;
@@ -16,7 +27,7 @@
     right: 1rem;
     font-size: 1.2rem;
     opacity: 0.5;
-} */
+}
 
 .list-overflow {
     padding: 0 var(--md-space);
