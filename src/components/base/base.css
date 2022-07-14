@@ -1,6 +1,6 @@
 .children-container {
     grid-area: children-container;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 185px);
 }
 
 .main-container {
@@ -20,13 +20,20 @@
         "footer footer";
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
+    .main-container {
+        grid-template-areas:
+            "nav nav"
+            "children-container children-container";
+    }
+}
+
+@media only screen and (max-width: 526px) {
     .main-container {
         grid-template-columns: 1fr;
+
         grid-template-areas:
             "nav"
-            "children-container"
-            "footer";
-
+            "children-container";
     }
 }
