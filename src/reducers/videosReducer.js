@@ -5,7 +5,8 @@ import {
 const {
     SET_VIDEOS,
     SET_ERROR,
-    INITIALIZE_VIDEO
+    INITIALIZE_VIDEO,
+    SET_CATEGORY
 } = videosActions;
 
 const videosReducer = (state, action) => {
@@ -23,6 +24,11 @@ const videosReducer = (state, action) => {
         case SET_ERROR:
             return {
                 ...state, loading: false, error: action.payload
+            };
+
+        case SET_CATEGORY:
+            return {
+                ...state, selectedCategory: action.payload
             };
 
         default:
