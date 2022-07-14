@@ -18,3 +18,7 @@ export {
     watchLaterReducer
 }
 from "./watchLaterReducer";
+export {
+    historyReducer
+}
+from "./historyReducer";
