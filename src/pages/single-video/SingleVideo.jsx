@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useVideos, useLikes, useAuth, useWatchLaterVideos } from "../../context";
-import { embedLink } from "../../utils";
+import { useVideos, useLikes, useAuth, useWatchLaterVideos, useHistory } from "../../context";
+import { embedLink, isPresent } from "../../utils";
 import { Modal } from "../../components";
 import toast from "react-hot-toast";
 import "./singleVideo.css"
@@ -31,11 +31,19 @@ addToWatchLater,
 removeFromWatchLater,
 } = useWatchLaterVideos();
 
+const {
+historyState: { history },
+addToHistory,
+} = useHistory();
 
 const navigate = useNavigate();
 const video = videos.find(eachVideo => eachVideo._id === videoId);
-const isLiked = likedList.find(eachVideo => eachVideo._id === videoId);
-const isPresentInWatchLater = watchLaterVideos.find(eachVideo => eachVideo._id === videoId);
+const { isLiked, isPresentInWatchLater, isPresentInHistory } = isPresent(
+videoId,
+likedList,
+watchLaterVideos,
+history
+);
 
 const handleWatchLater = () => {
 token
@@ -58,8 +66,13 @@ navigate("/signin");
 }
 };
 
+useEffect(() => {
+token ? (!isPresentInHistory ? addToHistory(video) : null) : null;
+}, []);
+
 return (
 <main className="video-container grid-70-30">
+    <Modal showModal={showModal} setShowModal={setShowModal} video={video} />
     <section className="video-section">
         <iframe className="video-iframe" width="560" height="450" src={embedLink(videoId)} title="YouTube video player"
             frameBorder="0" loading="lazy"

@@ -42,10 +42,10 @@ return(
                     />
                 </div>
                 <div className="flex-total-center">
-                   <button className="btn primary-btn" onClick={e => submitPlaylistHandler(e)}>
+                   <button className="btn btn-primary" onClick={e => submitPlaylistHandler(e)}>
                         Create
                     </button>
-                    <button className="btn secondary-btn" onClick={()=> setIsCreating(false)}>
+                    <button className="btn btn-secondary" onClick={()=> setIsCreating(false)}>
                         Discard
                     </button>
                 </div>

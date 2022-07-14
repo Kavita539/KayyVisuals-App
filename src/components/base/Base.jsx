@@ -4,6 +4,9 @@ import {
 import {
     Navbar
 } from "../navbar/Navbar";
+import { 
+    NavAside 
+} from "../navbar/NavAside";
 import {
     SideBar
 }
@@ -19,12 +22,19 @@ import "./base.css";
 const Base = ({
         children
     }) => {
+        const [navAside, setNavAside] = useState(false);
         const { pathname } = useLocation();
         const sidebarRestrictedRoutes = ["/signin", "/signup","/"];
+
+        useEffect(() => {
+            setNavAside(false);
+        }, [pathname]);
+        
         return (
     <>
         <Toaster />
-        <Navbar />
+        <Navbar navAside={navAside} setNavAside={setNavAside} />
+        <NavAside navAside={navAside} setNavAside={setNavAside} />
         <div className={ sidebarRestrictedRoutes.includes(pathname) ? "main-container-secondary" : "main-container" }>
             {sidebarRestrictedRoutes.includes(pathname) ? null :
             <SideBar />}

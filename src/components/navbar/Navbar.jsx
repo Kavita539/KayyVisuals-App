@@ -42,7 +42,7 @@ const Navbar = () => {
                     </li>
                 ) : (
                     <li>
-                        <Link to="/signin" className="anchor-tag-badge-container"> <i className="fas fa-user "></i> <span className="text-xs">Login</span></Link>
+                        <Link to="/signin" className="anchor-tag-badge-container"> <i className="fas fa-user"></i> <span className="text-xs">Login</span></Link>
                     </li>
                 )}
             </ul>
