@@ -13,3 +13,8 @@ export {
     LikesProvider
 }
 from "./likesContext";
+export {
+    usePlaylist,
+    PlaylistProvider
+}
+from "./playlistContext";

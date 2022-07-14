@@ -10,3 +10,7 @@ export {
     likesReducer
 }
 from "./likesReducer";
+export {
+    playlistReducer
+}
+from "./playlistReducer";

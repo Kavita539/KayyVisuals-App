@@ -1,0 +1,87 @@
+.modal-background {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    inset: 0 0 0 0;
+    overflow: auto;
+    background-color: var(--card-overlay-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-total-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.dialog-modal-box {
+    background-color: var(--bg-color);
+    width: 20%;
+    border: none;
+    border-radius: 4.8px;
+    padding: var(--md-space);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--card-shadow);
+    position: relative;
+}
+
+.modal-action-btn {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.list-overflow {
+    padding: 0 var(--md-space);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.dialog-content-secondary {
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-container {
+    height: 8rem;
+}
+
+.playlist-form {
+    gap: var(--md-space);
+}
+
+.playlist-form .input-grp {
+    margin: var(--md-space) 0;
+}
+
+.dialog-list .loader {
+    width: 2rem;
+}
+
+.dialog-list .loading-container {
+    min-height: 8rem;
+}
+
+.dialog-list .checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--md-space);
+}
+
+.checkbox {
+    cursor: pointer;
+}

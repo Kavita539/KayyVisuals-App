@@ -1,33 +1,39 @@
 import {
-    useState
+useState
 }
 from "react";
 import {
-    Link
+ Link, useNavigate
 }
 from "react-router-dom";
 import {
-    thumbnailLink
+thumbnailLink
 } from "../../utils";
+import { Modal } from "../modal/Modal";
+import { useAuth } from "../../context";
+import toast from "react-hot-toast";
 import "./videoCard.css";
 
 const VideoCard = ({ video }) => {
-  const {
-      _id,
-      title,
-      creator,
-      creatorImg
-  } = video;
-  const getVideoTitleTrimmedToEightyChar = title => {
-      if (title.length < 80) {
-          return title;
-      }
-      return title.substr(0, 78) + "..";
-  };
+const {
+_id,
+title,
+creator,
+creatorImg
+} = video;
 
-  const [showThreeDotMenu, setShowThreeDotMenu] = useState(false);
+const [showModal, setShowModal]=useState(false); 
+const [showThreeDotMenu, setShowThreeDotMenu]=useState(false); 
+const navigate = useNavigate();
+const {
+  authState: {
+    userDetails: { token },
+  },
+} = useAuth();
 
-  return (
+return ( 
+   <>
+    <Modal showModal={showModal} setShowModal={setShowModal} video={video} />
     <div className="video-card">
         <Link to={`/explore/${_id}`} className="video-card-image-container">
         <img className="responsive-img" src={thumbnailLink(_id)} alt={title} />
@@ -40,9 +46,7 @@ const VideoCard = ({ video }) => {
 
             <div>
                 <Link to={`/explore/${_id}`} className="text-description">
-                <span className="description-heading text-semibold">
-                    {getVideoTitleTrimmedToEightyChar(title)}
-                </span>
+                <span className="description-heading text-semibold">{title}</span>
                 <span className="text-xs text-semibold text-gray">{creator}</span>
                 </Link>
             </div>
@@ -59,7 +63,16 @@ const VideoCard = ({ video }) => {
                         <i className="text-center fas fa-clock"></i>
                         <span className="text-sm">Watch later</span>
                     </li>
-                    <li className="grid-30-70">
+                    <li className="grid-30-70" onClick={()=> {
+                        setShowThreeDotMenu(prevState => !prevState);
+                        if (token) {
+                            setShowModal(true);
+                          } else {
+                            toast.error("Please login continue");
+                            navigate("/signin");
+                        }
+                        }}
+                        >
                         <i className="text-center fas fa-folder-plus"></i>
                         <span className="text-sm">Save to playlist</span>
                     </li>
@@ -72,9 +85,10 @@ const VideoCard = ({ video }) => {
             </div>
         </div>
     </div>
-  );
+</>
+);
 };
 
 export {
-    VideoCard
+VideoCard
 };
