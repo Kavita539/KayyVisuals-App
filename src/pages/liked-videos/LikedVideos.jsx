@@ -42,7 +42,7 @@ const LikedVideos = () => {
     ) : (
       <main className="flex-total-center flex-column playlist-container-secondary">
         <h3>No liked videos</h3>
-        <Link to="/" className="btn primary-btn">
+        <Link to="/explore" className="btn btn-primary">
           Explore
         </Link>
       </main>

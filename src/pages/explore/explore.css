@@ -9,10 +9,39 @@
     justify-items: center;
 }
 
+.explore-category-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--md-space);
+    padding: var(--md-space);
+}
+
+.chip-btn {
+    border-radius: 10rem;
+}
+
+.chip-btn:hover {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.chip-btn-active,
+.chip-btn-active:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
 
 @media only screen and (max-width: 1200px) {
     .video-listing-gridContainer {
         padding: var(--xxxl-space);
 
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .chip-btn {
+        flex: 1;
+        font-size: 0.8rem;
+        padding: 3px;
     }
 }

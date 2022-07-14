@@ -10,7 +10,7 @@ export {
     Signin
 }
 from "./authentication-pages/Signin";
-export { 
+export {
     Signup
 }
 from "./authentication-pages/Signup";
@@ -26,3 +26,11 @@ export {
     WatchLater
 }
 from "./watch-later/WatchLater";
+export {
+    History
+}
+from "./history/History";
+export {
+    Home
+}
+from "./home/Home";

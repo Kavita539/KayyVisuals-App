@@ -1,28 +1,49 @@
 import {
-    VideoCard,
-    Loader
+VideoCard,
+Loader
 } from "../../components";
 import {
-    useVideos
+useVideos, useCategory
 } from "../../context";
+import { videosActions } from "../../actionTypes";
 import "./explore.css";
 
 const Explore = () => {
 const {
-    videoState: {
-        videos,
-        loader,
-        error
-    },
+videoState: { loading, selectedCategory },
+videoDispatch,
+finalVideoList,
 } = useVideos();
+
+const {
+categoryState: { categories },
+} = useCategory();
+
+const { SET_CATEGORY } = videosActions;
+
 
 return(
 <>
-    {loader &&
-    <Loader />}
-    {error && <span>{error}</span>}
+    {loading ? (
+    <Loader />
+    ) : (
+    <div className="explore-category-section">
+        <button className={`btn outline-btn-primary chip-btn ${ selectedCategory==="all" ? "chip-btn-active" : "" }`}
+            onClick={()=> videoDispatch({ type: SET_CATEGORY, payload: "all" })}
+            >
+            All
+        </button>
+        {categories.map(({ _id, categoryName }) => (
+        <button key={_id} className={`btn outline-btn-primary chip-btn ${ selectedCategory===categoryName
+            ? "chip-btn-active" : "" }`} onClick={()=> videoDispatch({ type: SET_CATEGORY, payload: categoryName })}
+            >
+            {categoryName}
+        </button>
+        ))}
+    </div>
+    )}
     <main className="video-listing-gridContainer">
-        {videos?.map(video => (
+        {finalVideoList?.map(video => (
         <VideoCard key={video._id} video={video} />
         ))}
     </main>

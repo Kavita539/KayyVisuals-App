@@ -30,3 +30,14 @@ export {
     removeFromWatchLaterServices,
 }
 from "./watchlater-services";
+export {
+    getCategoriesServices
+}
+from "./getCategoriesServices";
+export {
+    getHistoryServices,
+    addToHistoryServices,
+    removeFromHistoryServices,
+    clearHistoryServices,
+}
+from "./history-services";

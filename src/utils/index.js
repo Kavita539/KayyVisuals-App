@@ -3,4 +3,12 @@ export {
     thumbnailLink
 }
 from "./videosLinkGenerator";
-export { validFormChecker, validLoginFormChecker } from "./validFormChecker";
+export {
+    validFormChecker,
+    validLoginFormChecker
+}
+from "./validFormChecker";
+export {
+    filterVideoList
+}
+from "./filterVideoList";

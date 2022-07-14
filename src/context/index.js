@@ -23,3 +23,13 @@ export {
     WatchLaterVideosProvider
 }
 from "./watchLaterContext";
+export {
+    useCategory,
+    CategoryProvider
+}
+from "./categoryContext";
+export {
+    useHistory,
+    HistoryProvider
+}
+from "./historyContext";

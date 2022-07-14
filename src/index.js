@@ -11,7 +11,7 @@ import {
   BrowserRouter as Router
 } from "react-router-dom";
 import {
-  VideosProvider, AuthProvider, LikesProvider, PlaylistProvider, WatchLaterVideosProvider
+  VideosProvider, AuthProvider, LikesProvider, PlaylistProvider, WatchLaterVideosProvider, CategoryProvider, HistoryProvider
 } from "./context";
 
 // Call make Server
@@ -25,7 +25,11 @@ ReactDOM.render(
          <LikesProvider>
           <PlaylistProvider>
             <WatchLaterVideosProvider>
+              <HistoryProvider>
+              <CategoryProvider>
               <App />
+              </CategoryProvider>
+              </HistoryProvider>
             </WatchLaterVideosProvider>
           </PlaylistProvider>
          </LikesProvider>
