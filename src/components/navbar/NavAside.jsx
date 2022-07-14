@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../../context";
-import "../sidebar/sidebar.css";
+import "../sidebar/sideBar.css";
 
 const NavAside = ({ navAside, setNavAside }) => {
 const {
