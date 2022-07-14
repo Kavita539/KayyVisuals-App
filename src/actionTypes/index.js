@@ -18,3 +18,7 @@ export {
     watchLaterActions
 }
 from "./watchLaterActions";
+export {
+    historyActions
+}
+from "./historyActions";

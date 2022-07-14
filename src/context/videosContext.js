@@ -13,6 +13,9 @@ import {
 import { 
     getVideosServices
 } from "../services";
+import {
+    filterVideoList
+} from "../utils";
 
 const {
     INITIALIZE_VIDEO,
@@ -31,6 +34,7 @@ const VideosProvider = ({
         loading: false,
         videos: [],
         error: "",
+        selectedCategory: "all",
     });
 
     useEffect(() => {
@@ -56,10 +60,13 @@ const VideosProvider = ({
         })();
     }, []);
 
+    const finalVideoList = filterVideoList(videoState.selectedCategory, videoState.videos);
+
     return ( <videosContext.Provider value = {
             {
                 videoState,
-                videoDispatch
+                videoDispatch,
+                finalVideoList
             }
         }> {
             children

@@ -20,7 +20,7 @@ const Base = ({
         children
     }) => {
         const { pathname } = useLocation();
-        const sidebarRestrictedRoutes = ["/signin", "/signup"];
+        const sidebarRestrictedRoutes = ["/signin", "/signup","/"];
         return (
     <>
         <Toaster />
@@ -30,7 +30,7 @@ const Base = ({
             <SideBar />}
             <div className="children-container">{children}</div>
         </div>
-        <Footer />
+        {pathname === "/" ? null : <Footer />}
     </>
    );
 };
