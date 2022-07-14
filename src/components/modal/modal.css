@@ -45,7 +45,7 @@
     padding: 0 var(--md-space);
 }
 
-::-webkit-scrollbar {
+.list-overflow::-webkit-scrollbar {
     display: none;
 }
 

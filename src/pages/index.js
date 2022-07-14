@@ -22,3 +22,7 @@ export {
     LikedVideos
 }
 from "./liked-videos/LikedVideos";
+export {
+    WatchLater
+}
+from "./watch-later/WatchLater";

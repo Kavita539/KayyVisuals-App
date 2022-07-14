@@ -31,7 +31,7 @@ const SideBar = () => {
                 </Link>
             </li>
             <li>
-                <Link className="grid-30-70" to="/">
+                <Link className="grid-30-70" to="/watch-later">
                     <i className="fas fa-clock"></i>
                     <span className="text-left link-right-element">Watch later</span>
                 </Link>
