@@ -14,3 +14,7 @@ export {
     playlistReducer
 }
 from "./playlistReducer";
+export {
+    watchLaterReducer
+}
+from "./watchLaterReducer";
