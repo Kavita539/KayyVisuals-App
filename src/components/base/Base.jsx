@@ -17,6 +17,7 @@ import {
 import { 
     Toaster 
 } from "react-hot-toast";
+import { useState, useEffect } from "react";
 import "./base.css";
 
 const Base = ({
