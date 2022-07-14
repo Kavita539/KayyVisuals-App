@@ -47,11 +47,9 @@ const Navbar = ({ setNavAside }) => {
                 </li>
                 {token ? (
                     <li>
-                        <Link to="/" className="anchor-tag-badge-container">
                         <button className="btn outline-btn logout-btn" onClick={() => logout()}>
                             <i className="fas fa-sign-out"></i>
                         </button>
-                        </Link>
                     </li>
                 ) : (
                     <li>

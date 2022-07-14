@@ -15,4 +15,5 @@ body {
     --sideBar-shadow: rgb(0 0 0 / 24%) 0px 4px 9px;
     --text-color: hsl(207, 7%, 31%);
     --card-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2);
+    --banner-bg-color: hsla(0,0%,100%,0.301);
 }
