@@ -23,13 +23,13 @@ export const videos = [
     creatorImg: "https://yt3.ggpht.com/KSc6tEomrBedJPKOz8RlVrhhy5LVLUzR44Jb9MpvIocdvAApcMK8rleG6UcIQ-MPnzBOw9ATOxk=s176-c-k-c0x00ffffff-no-rj",
   },
   {
-    _id: "1f8yoFFdkc",
-    title: "10 MIN BEGINNER AB WORKOUT // No Equipment",
+    _id: "IFQmOZqvtWg",
+    title: "30-Minute No-Equipment Full-Body Toning Workout",
     category: "Fitness",
     description:
-       "If you have a hard time keeping up with my super intense 10min Ab Workout and 10min Sixpack Workout... THIS ONE IS FOR YOU :)",
-    creator: "Pamela Reif",
-    creatorImg: "https://yt3.ggpht.com/ytc/AKedOLTsCneHwIagjydz7P9plmZ3vum7qOLOfjJPn_xB5g=s48-c-k-c0x00ffffff-no-rj",
+       "Fitness and dance expert Nicole Steen makes sure you hit every muscle in your body in this 30-minute no-equipment workout.",
+    creator: "PPPSUGAR Fitness",
+    creatorImg: "https://yt3.ggpht.com/nx-csgnbbHGqPRPLblI_bAn5SEzABrlkngfqKu68DO8lkCvdWuy13UAD4FCbggBwAhS-XNde=s48-c-k-c0x00ffffff-no-rj",
   },
   {
     _id: "L9VBoIK3Chw",
