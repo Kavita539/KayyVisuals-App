@@ -23,7 +23,7 @@ return (
     style={{ backgroundImage: `url(/assets/kayyvisuals_bg.jpg)` }}>
     <section className="banner">
         <div className="banner-content text-center">
-            <h2 className="banner-heading">The orion Play</h2>
+            <h2 className="banner-heading">KayyVisuals</h2>
             <div className="banner-cta">
                 <Link to="/explore" className="btn btn-primary">
                 Watch now

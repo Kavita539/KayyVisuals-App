@@ -24,7 +24,7 @@
 .banner-content {
     padding: var(--xl-space);
     border-radius: 5px;
-    row-gap: var(--md-space);
+    row-gap: var(--lg-space);
     flex-direction: column;
 }
 
@@ -34,6 +34,7 @@
     margin: auto;
     color: var(--primary-color);
     word-spacing: 20px;
+    padding-bottom: var(--md-space);
 }
 
 .banner-sub-heading {
