@@ -1,20 +1,31 @@
 import {
-    Link
+    Link,
+    useLocation, 
+    useNavigate 
 } from "react-router-dom";
-import { useAuth } from "../../context";
+import { useAuth, useVideos } from "../../context";
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ setNavAside }) => {
     const {
         authState: {
             userDetails: { token },
         },
         logout,
     } = useAuth();
+
+    const {
+        videoState: { appliedSearchTerm },
+        videoDispatch,
+    } = useVideos();
+    
+    const pathname = useLocation();
+    const navigate = useNavigate();
+
     return (
         <nav className="navbar">
             <div className="left-navbar">
-                <button id="menu-icon-button" className="burger-menu-button navlist-link-item">
+                <button id="menu-icon-button" className="burger-menu-button navlist-link-item" onClick={() => setNavAside(true)}>
                     <i className="fas fa-bars"></i>
                 </button>
                 <a className="link-no-style" href="./">
