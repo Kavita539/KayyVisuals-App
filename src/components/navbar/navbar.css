@@ -160,7 +160,10 @@
 }
 
 /* media-queries */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1000px) {
+    .navbar{
+        padding: 0;
+    }
     .burger-menu-button {
         display: block;
     }
