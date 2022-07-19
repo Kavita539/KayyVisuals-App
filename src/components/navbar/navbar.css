@@ -108,8 +108,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--lg-space);
-    padding: var(--sm-space);
+    grid-gap: var(--sm-space);
+    gap: var(--sm-space);
+    padding: 5rem;
+    margin-left: 0;
+    margin-top: 0;
 }
 
 .nav-aside-list li {
@@ -128,7 +131,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-color);
-    padding: var(--lg-space);
+    padding: 8px;
+    margin-right: 1px;
 }
 
 .nav-aside-user {
