@@ -108,33 +108,6 @@ return (
         </div>
     </section>
 
-    <section className="notes-section flex-column">
-        <h2 className="text-center">Notes</h2>
-        <form className="notes-form">
-            <div className="input-grp">
-                <input className="form-field" type="text" required />
-            </div>
-            <div className="input-grp">
-                <textarea className="form-field" cols="30" rows="10"></textarea>
-            </div>
-            <button className="btn btn-primary">Save note</button>
-        </form>
-
-        <div className="notes-card flex-column">
-            <div className="card text-card">
-                <h3>This is a Text card</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, vel.</p>
-                <div className="card-cta-vertical">
-                    <button className="btn outline-btn text-primary-color">
-                        <i className="far fa-edit"></i>
-                    </button>
-                    <button className="btn outline-btn text-primary-color">
-                        <i className="far fa-trash"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
 </main>
 );
 };
