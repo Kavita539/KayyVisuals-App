@@ -67,4 +67,6 @@ Start the server
 
 ## Demo
 
+![kayyvisuals gif](/public/assets/kayyvisuals.gif)
+
 
