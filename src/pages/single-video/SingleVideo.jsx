@@ -84,7 +84,7 @@ return (
 
             <div className="video-cta">
                 <button className="video-cta-buttons" onClick={handleLike}>
-                    <i className={`fas fa-thumbs-up ${isLiked ? "primary-color" : "" }`}></i>
+                    <i className={`fas fa-thumbs-up ${isLiked ? "text-primary-color" : "" }`}></i>
                 </button>
 
                 <button className="video-cta-buttons" onClick={handleWatchLater}>
