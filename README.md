@@ -5,7 +5,7 @@
 
 ## Quick Start
 
-Preview Link : 
+Preview Link : https://kayyvisuals.netlify.app/
 
 ## Run Locally
 
