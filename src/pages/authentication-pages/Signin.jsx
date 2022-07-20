@@ -40,10 +40,10 @@ const Signin = () => {
         e.preventDefault();
         setSubmitted(true);
         setUserInput({
-            email: "adarshbalika@gmail.com",
-            password: "adarshBalika123",
+            email: "hellouser@gmail.com",
+            password: "helloUser123",
         });
-        login({ email: "adarshbalika@gmail.com", password: "adarshBalika123" }, from);
+        login({ email: "hellouser@gmail.com", password: "helloUser123" }, from);
     };
 
 
