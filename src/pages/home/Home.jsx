@@ -31,11 +31,11 @@ return (
             </div>
         </div>
         <div className="category-section">
-            <h1>Categories</h1>
+            <h3>Categories</h3>
             <div className="categories">
                 {categories.map(({ _id, categoryName }) => {
                 return (
-                <div className="category-link" key={_id} onClick={()=> handleNavigate(categoryName)}
+                <div className="category-link btn outline-btn-primary category-btn" key={_id} onClick={()=> handleNavigate(categoryName)}
                     >
                     {categoryName}
                 </div>

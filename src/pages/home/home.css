@@ -26,6 +26,14 @@
     border-radius: 5px;
     row-gap: var(--lg-space);
     flex-direction: column;
+    background-color: var(--banner-content-bg-color);
+}
+
+@supports (backdrop-filter: blur(3px)) {
+    .banner-content {
+      background-color: var(--banner-bg-color);
+      backdrop-filter: blur(3px);
+    }
 }
 
 .banner-heading {
@@ -71,4 +79,14 @@
 
 .category-link:hover {
     color: var(--secondary-color);
+}
+
+.category-btn {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 10rem;
+    border: 2px solid var(--primary-color);
+    text-decoration: none;
+    transition: all .3s ease 0s;
+    box-shadow: var(--card-shadow);
 }

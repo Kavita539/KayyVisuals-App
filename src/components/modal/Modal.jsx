@@ -81,7 +81,7 @@ return (
         </form>
         ) : (
         <div className="dialog-cta">
-            <button className="btn outline-btn block-btn confirmation-dialog-box-close-btn" onClick={()=>
+            <button className="btn btn-primary block-btn confirmation-dialog-box-close-btn" onClick={()=>
                 setIsCreating(true)}
                 >
                 Create new playlist

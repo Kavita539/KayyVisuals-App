@@ -12,3 +12,7 @@ export {
     filterVideoList
 }
 from "./filterVideoList";
+export {
+    isPresent
+}
+from "./isPresentArrayMethods";

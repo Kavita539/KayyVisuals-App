@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useVideos, useLikes, useAuth, useWatchLaterVideos } from "../../context";
-import { embedLink } from "../../utils";
+import { useVideos, useLikes, useAuth, useWatchLaterVideos, useHistory } from "../../context";
+import { embedLink, isPresent } from "../../utils";
 import { Modal } from "../../components";
 import toast from "react-hot-toast";
 import "./singleVideo.css"
@@ -31,11 +31,19 @@ addToWatchLater,
 removeFromWatchLater,
 } = useWatchLaterVideos();
 
+const {
+historyState: { history },
+addToHistory,
+} = useHistory();
 
 const navigate = useNavigate();
 const video = videos.find(eachVideo => eachVideo._id === videoId);
-const isLiked = likedList.find(eachVideo => eachVideo._id === videoId);
-const isPresentInWatchLater = watchLaterVideos.find(eachVideo => eachVideo._id === videoId);
+const { isLiked, isPresentInWatchLater, isPresentInHistory } = isPresent(
+videoId,
+likedList,
+watchLaterVideos,
+history
+);
 
 const handleWatchLater = () => {
 token
@@ -58,8 +66,13 @@ navigate("/signin");
 }
 };
 
+useEffect(() => {
+token ? (!isPresentInHistory ? addToHistory(video) : null) : null;
+}, []);
+
 return (
 <main className="video-container grid-70-30">
+    <Modal showModal={showModal} setShowModal={setShowModal} video={video} />
     <section className="video-section">
         <iframe className="video-iframe" width="560" height="450" src={embedLink(videoId)} title="YouTube video player"
             frameBorder="0" loading="lazy"
@@ -71,7 +84,7 @@ return (
 
             <div className="video-cta">
                 <button className="video-cta-buttons" onClick={handleLike}>
-                    <i className={`fas fa-thumbs-up ${isLiked ? "primary-color" : "" }`}></i>
+                    <i className={`fas fa-thumbs-up ${isLiked ? "text-primary-color" : "" }`}></i>
                 </button>
 
                 <button className="video-cta-buttons" onClick={handleWatchLater}>
@@ -95,33 +108,6 @@ return (
         </div>
     </section>
 
-    <section className="notes-section flex-column">
-        <h2 className="text-center">Notes</h2>
-        <form className="notes-form">
-            <div className="input-grp">
-                <input className="form-field" type="text" required />
-            </div>
-            <div className="input-grp">
-                <textarea className="form-field" cols="30" rows="10"></textarea>
-            </div>
-            <button className="btn btn-primary">Save note</button>
-        </form>
-
-        <div className="notes-card flex-column">
-            <div className="card text-card">
-                <h3>This is a Text card</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, vel.</p>
-                <div className="card-cta-vertical">
-                    <button className="btn outline-btn text-primary-color">
-                        <i className="far fa-edit"></i>
-                    </button>
-                    <button className="btn outline-btn text-primary-color">
-                        <i className="far fa-trash"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
 </main>
 );
 };
