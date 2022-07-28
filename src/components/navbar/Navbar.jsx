@@ -28,11 +28,11 @@ const Navbar = ({ setNavAside }) => {
                 <button id="menu-icon-button" className="burger-menu-button navlist-link-item" onClick={() => setNavAside(true)}>
                     <i className="fas fa-bars"></i>
                 </button>
-                <a className="link-no-style" href="./">
+                <Link  to="/" className="link-no-style">
                     <div className="nav-logo-title"> <span className="text-xl custom-color">K</span>ayy<span
                         className="text-xl custom-color">V</span>isuals</div>
                     <div className="nav-logo-tagline custom-color">ITS KAYY TO BINGE!</div>
-                </a>
+                </Link>
             </div>
             <div className="mid-navbar">
                 <div className="nav-search-bar">
