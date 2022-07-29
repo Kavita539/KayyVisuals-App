@@ -34,3 +34,4 @@ export {
     Home
 }
 from "./home/Home";
+export { SinglePlaylist } from "./single-playlist/SinglePlaylist";
