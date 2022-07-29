@@ -14,7 +14,7 @@ return (
 <div className="playlist-card">
   <Link to={`/playlist/${playlist._id}`} className="playlist-card-img-container">
   <img className="responsive-img" src={ videos?.length ? thumbnailLink(videos[0]?._id)
-    : "/assets/undraw_going_up_re_86kg.svg" } alt={videos[0]?.title} />
+    : "/assets/playlist.svg" } alt={videos[0]?.title} />
   <div className="playlist-card-overlay-container flex-column flex-total-center">
     <span>{videos?.length}</span>
     <span className="material-icons">playlist_play</span>
