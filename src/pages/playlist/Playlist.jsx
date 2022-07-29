@@ -45,7 +45,7 @@ return(
                    <button className="btn btn-primary" onClick={e => submitPlaylistHandler(e)}>
                         Create
                     </button>
-                    <button className="btn btn-secondary" onClick={()=> setPlaylistName("")}>
+                    <button className="btn btn-secondary" onClick={()=> {setIsCreating(false);setPlaylistName("");}}>
                         Discard
                     </button>
                 </div>
