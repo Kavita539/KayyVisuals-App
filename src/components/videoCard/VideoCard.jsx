@@ -96,10 +96,6 @@ return (
                         <i className="text-center fas fa-folder-plus"></i>
                         <span className="text-sm">Save to playlist</span>
                     </li>
-                    <li className="grid-30-70">
-                        <i className="text-center fas fa-share"></i>
-                        <span className="text-sm">Share</span>
-                    </li>
                 </ul>
                 )}
             </div>
