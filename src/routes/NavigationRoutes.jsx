@@ -16,7 +16,7 @@ const NavigationRoutes = () => {
       <Route path="/explore/:videoId" element={<SingleVideo />} />
       <Route path="/playlist/:playlistId" element={<SinglePlaylist />} />
       <Route path="/liked" element={<PrivateRoutes element={LikedVideos} />} />
-      <Route path="/playlist" element={<PrivateRoute element={Playlist} />} />
+      <Route path="/playlist" element={<PrivateRoutes element={Playlist} />} />
       <Route path="/watch-later" element={<PrivateRoutes element={WatchLater} />} />
       <Route path="/history" element={<PrivateRoutes element={History} />} />
       {!token ? (
