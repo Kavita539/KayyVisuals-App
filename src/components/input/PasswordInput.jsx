@@ -9,7 +9,7 @@ const PasswordInput = ({
     placeholder,
     mandatory,
     defaultValue,
-    errorText,
+    showError,
     helperText,
     disabled,
     name,
