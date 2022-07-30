@@ -34,12 +34,7 @@ const Navbar = ({ setNavAside }) => {
                     <div className="nav-logo-tagline custom-color">ITS KAYY TO BINGE!</div>
                 </Link>
             </div>
-            <div className="mid-navbar">
-                <div className="nav-search-bar">
-                    <button className="btn search-btn"><i className="fas fa-search"></i></button>
-                    <input className="form-field" type="text" placeholder="search here..." />
-                </div>
-            </div>
+
             <ul className="right-navbar">
                 <li>
                     <Link to="/explore" className="navlist-link-item"> <button className="btn link-btn">Explore</button>
